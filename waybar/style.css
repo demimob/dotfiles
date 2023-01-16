@@ -1,0 +1,70 @@
+@define-color white			#ffffff;
+@define-color alpha			rgba(40, 40, 40, 0.15);
+@define-color semi-alpha	rgba(255, 255, 255, 0.30);	
+@define-color grey 			#f0f0f0;
+
+
+* {
+	all: initial;
+	font-size: 10px;
+	font-family: Liberaion Sans, Hack Nerd Font;
+	color: @grey;
+	border: none;
+	font-weight: normal;
+}
+
+#waybar  {
+	background: @alpha; /* #282828e0 */
+}
+
+#workspaces button {
+	background: transparent;
+	color: @grey;
+	padding: 0px 5px;
+	margin: 3px 0px;
+	border-radius: 5px;
+}
+
+#workspaces button.focused {
+	background:	@semi-alpha
+}
+
+
+#cpu,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#clock.1, 
+#clock.2,
+#tray {
+	padding: 0px 5px;
+	margin: 3px 3px;
+	border-radius: 7px;
+	background: @semi-alpha
+}
+
+#custom-shutdown {
+	font-size: 15px;
+	margin: 0px 8px;
+}
+
+#custom-restart {
+	font-size: 15px;
+	margin: 0px 8px;
+}
+
+#custom-exit {
+	font-size: 15px;
+	margin: 0px 8px;
+}
+
+#custom-launcher {
+	font-size: 20px;
+	padding: 0px 8px;
+}
+
+#button {
+  min-height: 24px;
+  min-width: 16px;
+}

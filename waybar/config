@@ -1,0 +1,84 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+	"height": 12,
+
+	"modules-left"  : ["custom/launcher", "sway/workspaces"],
+	"modules-right" : ["cpu", "battery", "backlight", "network", "pulseaudio", "clock#1", "clock#2", "tray", "custom/exit", "custom/restart", "custom/shutdown"],
+
+	"sway/workspaces": {
+		"format": "{name}",
+		"persistent_workspaces": {"1": [], "2": [], "3": [], "4": [], "5": [], "6": [], "7": [], "8": [], "9": []},
+	},
+
+	"clock#1": {
+		"format": " {:%H:%M:%S}",
+		"interval": 1,
+	},
+
+	"clock#2": {
+		"format": " {:%d %m 20%y (%a)}",
+	},
+
+	"tray": {
+		"icon-size": 20,
+		"spacing": 5
+	},
+
+	"battery": {
+		"bat": "BAT0",
+		"format": " {capacity}% {time}",
+		"format-icons": ["","","","",""],
+		"interval" : 10
+	},
+
+	"backlight": {
+		"format": " {percent}%",
+		"on-scroll-up"	: "brightnessctl set 5%+",
+		"on-scroll-down": "brightnessctl -n=133 set 5%-"
+
+	},
+	
+	"cpu": {
+		"format": "CPU: {usage}%",
+		"interval":	1,
+		"on-click": "alacritty -e 'htop'"
+	},
+
+	"pulseaudio": {
+		"format": " {volume}%",
+		"scroll-step": 2,
+		"on-click": "pavucontrol"
+	},
+
+	"custom/shutdown": {
+		"format": "",
+		"on-click": "shutdown -P now"
+	},
+
+	"custom/restart": {
+		"format": "",
+		"on-click": "reboot"
+	},
+
+	"custom/launcher": {
+		"format": "",
+		"on-click": "fuzzel"
+	},
+
+	"custom/exit": {
+		"format": "",
+		"on-click": "swaymsg exit"
+	},
+
+	"network": {
+		"interface": "wlp2s0",
+		"format": " {essid} ({signalStrength}%)  {bandwidthUpBytes}  {bandwidthDownBytes}",
+		"on-click": "nm-applet --indicator",
+		"interval": 1,
+	},
+
+
+}
