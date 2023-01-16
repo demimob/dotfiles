@@ -18,3 +18,6 @@ All have been patched. Check the `patches` folder to see what pactches have beem
 1. Dunst
 2. Waybar
 3. Kitty
+4. Neovim
+5. Fuzzel
+6. Picom
