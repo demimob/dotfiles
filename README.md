@@ -7,7 +7,7 @@ Configuration settings for various window managers and other pieces of software 
 2. slstatus
 3. dwm
 
-All have been patched. Check the `patches` folder to see what pactches have beem applied.
+All have been patched. Check the `patches` folder to see what patches have beem applied.
 
 ### Wayland compositors:
 1. Sway
